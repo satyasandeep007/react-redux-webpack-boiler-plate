@@ -1,7 +1,7 @@
 {
-  "name": "react_webpack_starter",
+  "name": "react_redux_webpack_starter",
   "version": "1.0.0",
-  "description": "Boilerplate for React apps",
+  "description": "Boilerplate for React-Redux",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",

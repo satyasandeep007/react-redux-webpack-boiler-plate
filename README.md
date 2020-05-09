@@ -15,38 +15,41 @@ npm run build
 
 ``` bash
 {
-  "name": "react_webpack_boiler-plate",
+  "name": "react_redux_webpack_starter",
   "version": "1.0.0",
-  "description": "Boilerplate for React using WebPack",
+  "description": "Boilerplate for React-Redux",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "./node_modules/.bin/webpack --mode production"
   },
-  "author": "SatyaSandeep",
+  "author": "Satya",
   "license": "ISC",
   "dependencies": {
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.1.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.14.1",
     "postcss-loader": "^2.1.6",
-    "redux-devtools-extension": "^2.13.5",
+    "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.20.3",
     "webpack": "^4.4.0",
     "webpack-cli": "^2.0.13",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.11.0"
   },
   "browserslist": {
     "production": [
@@ -54,6 +57,7 @@ npm run build
     ]
   }
 }
+
 
 ```
 
@@ -93,7 +97,8 @@ module.exports = (env, options) => {
             rules: [
                 {
                     test: /\.js?$/,
-                    use: ["babel-loader"]
+                    use: [
+                        "babel-loader"]
                 },
                 {
                     test: /\.scss$/,
@@ -155,6 +160,7 @@ module.exports = (env, options) => {
     };
 };
 
+
 ```
 
 
@@ -176,10 +182,20 @@ module.exports = (env, options) => {
 ├── public
 │   ├── index.html
 ├── src
+│   ├── components
+│   |   ├── Footer.js
+│   |   ├── Header.js
+│   |   ├── Home.js
+│   ├── redux
+│   |   ├── actions
+│   |   ├── constants
+│   |   ├── reducers
 │   ├── App.js
 │   ├── index.js
 ├── .babelrc
+├── .gitignore
 ├── package.json
+├── package-lock.json
 ├── README.md
 ├── webpack.config.js
 

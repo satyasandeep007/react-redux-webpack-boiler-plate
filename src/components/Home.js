@@ -9,7 +9,6 @@ class Component2 extends Component {
     this.decrement = this.decrement.bind(this);
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
-
   }
 
   increment() {
